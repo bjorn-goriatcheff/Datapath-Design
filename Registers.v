@@ -6,11 +6,32 @@ module Registers(
 	input [3:0] ReadAdd2,
 	input [3:0] WriteReg1,
 	input [3:0] WriteReg2,
-	input WriteDst
+	input WriteDst,
+	input clk,
+	input rst
 );
+//15 Registers
+reg[15:0]Reg [15:0];
+
+//Combinatorial READ
+always@(*)
+begin
 
 
 
+
+
+end
+
+//Sequential Write
+always@(posedge clk, negedge rst)
+begin
+
+
+
+
+
+end
 
 
 
