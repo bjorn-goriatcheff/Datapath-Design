@@ -11,26 +11,25 @@ module ALU(
 
 always@(*)
 begin
-	if(ALUOp == 4'b0000)
-		Upper = Data1 + Data2;
-	if(ALUOp == 4'b0001)
-		Upper = Data1 - Data2;
-	if(ALUOp == 4'b0100)
-		Upper = Data1 * Data2;
-	if(ALUOp == 4'b0101)
-		Upper = Data1 / Data2;
-	if(ALUOp == 4'b0111)
+	if(ALUOp == 4'b0000)  //Signed Add
+		Lower = Data1 + Data2;
+	if(ALUOp == 4'b0001)  //Signed Sub
+		Lower = Data1 - Data2;
+	if(ALUOp == 4'b0100)  //Signed Mul
+		Lower = Data1 * Data2;
+	if(ALUOp == 4'b0101)  //Signed Div
+		Lower = Data1 / Data2;
+	if(ALUOp == 4'b0111)  //Move
+		Lower = Data2;
+	if(ALUOp == 4'b1000)  //Swap
 	begin
+		Lower = Data2;
+		Upper = Data1;
 	end
-	if(ALUOp == 4'b1000)
-	begin
-	end
-	if(ALUOp == 4'b1001)
-	begin
-	end
-	if(ALUOp == 4'b1011)
-	begin
-	end
+	if(ALUOp == 4'b1001)  //AND
+		Lower = Data1 && Data2
+	if(ALUOp == 4'b1011) //OR
+		Lower = Data1 || Data2
 end
 
 endmodule
