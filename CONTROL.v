@@ -10,7 +10,7 @@ module CONTROL(
 	output reg Halt,
 //	output reg[1:0] Branch,
 	output reg[1:0] Wdst,
-//	output reg[1:0] MemW,
+	output reg[1:0] MemW,
 	input [3:0] opcode,
 	input [3:0] func
 );
