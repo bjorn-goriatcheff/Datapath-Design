@@ -32,6 +32,43 @@ begin
 		//ORI R4 2
 		data[9]=16'h9402;
 		//LBU R6 4(R9)
+		data[10]=16'hA694;		
+		//SB R6, 6(R9)
+		data[11]=16'hB696;
+		//LW R6 6(R9)
+		data[12]=16'hC696;
+		/////BEQ R7 4		//TODO
+		data[13]=16'hC696;
+		//ADD R11 R1
+		data[14]=16'hFB10;
+		//////BLT R7 5		//TODO
+		data[15]=16'hFB10;
+		//ADD R11 R2
+		data[16]=16'hFB20;
+		//BGT R7 2
+		data[17]=16'hFB20;
+		//ADD R1 R1
+		data[18]=16'hF110;
+		//ADD R1 R1
+		data[19]=16'hF110;
+		//LW R8 0(R9)
+		data[20]=16'hC890;
+		//ADD R8 R8
+		data[21]=16'hF880;
+		//SW R8 2(R9)
+		data[22]=16'hD892;
+		//LW R10 2(R9)
+		data[23]=16'hCA92;
+		//ADD R12 R12
+		data[24]=16'hFCC0;
+		//SUB R13 R13
+		data[25]=16'hFDD1;
+		//ADD R12 R13
+		data[26]=16'hFCD0;
+		//EFFF
+		data[27]=16'hEFFF;
+
+
 
 	end
 	else if(clk)

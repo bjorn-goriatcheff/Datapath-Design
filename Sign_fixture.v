@@ -1,7 +1,7 @@
 `include "Sign.v"
 module Sign_fixture;
 
-reg [7:0] in;
+reg [3:0] in;
 wire [15:0] out;
 initial
         $vcdpluson;
@@ -12,9 +12,9 @@ Sign s(out, in);
 
 initial
 begin
-	in = 8'h00;
-	#10 in = 8'h01;
-	#20 in = 8'hFF;
+	in = 4'h0;
+	#10 in = 8'h1;
+	#20 in = 8'hF;
 end
 
 initial
