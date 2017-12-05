@@ -1,10 +1,10 @@
-module BufferEXMEM#(parameter S=15, N=5, C=2)
+module BufferEXMEM#(parameter S=15, N=4, C=1)
 (
 	output reg[S:0] OutUpper,
 	output reg[S:0] OutLower,
 	output reg[S:0] OutWord,
 	output reg[7:0] OutByte,
-	output reg[S:0] OutCtrl,
+	output reg[C:0] OutCtrl,
 	//forward out
 	input [S:0] InLower,
 	input [S:0] InUpper,
@@ -15,22 +15,21 @@ module BufferEXMEM#(parameter S=15, N=5, C=2)
 	input clk,
 	input rst
 );
-integer inc1;
-reg[S:0]buff[N:0];
-reg[C:0]ctrl;
+//integer inc1;
+//reg[S:0]buff[N:0];
+//reg[C:0]ctrl;
 
 //Combinatorial READ
 always@(*)
 begin
-	OutUpper=buff[0];
-	OutLower=buff[1];
-	OutWord=buff[2];
-	OutByte=buff[3][7:0];
-	//
-	OutCtrl=ctrl;
+	OutUpper=InUpper;
+	OutLower=InLower;
+	OutWord=InWord;
+	OutByte=InByte;
+	OutCtrl=InCtrl;
 end
 
-//Sequential WRITE
+/*Sequential WRITE
 always@(posedge clk, negedge rst)
 begin
 	if(!rst)
@@ -48,5 +47,5 @@ begin
 		ctrl=InCtrl;
 	end
 	
-end
+end*/
 endmodule

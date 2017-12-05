@@ -1,30 +1,30 @@
-module BufferMEMWB#(parameter S=15, N=3, C=1)
+module BufferMEMWB#(parameter S=15, N=3)
 (
 	output reg[S:0] OutWord,
 	output reg[7:0] OutByte,
-	output reg[S:0] OutCtrl,
-	//forward out
+	//output reg[S:0] OutCtrl,
+	output reg[S:0] ForwardOut,
 	input [S:0] InWord,
 	input [7:0] InByte,
-	input [C:0] InCtrl,
-	//forward in
+	input InCtrl,
+	input [S:0] ForwardIn,
 	input clk,
 	input rst
 );
-integer inc1;
+/*integer inc1;
 reg[S:0]buff[N:0];
-reg[C:0]ctrl;
+reg[C:0]ctrl;*/
 
 //Combinatorial READ
 always@(*)
 begin
-	OutWord=buff[0];
-	OutByte=buff[1][7:0];
-	//
-	OutCtrl=ctrl;
+	OutWord=InWord;
+	OutByte=InByte;
+	ForwardOut=ForwardIn;
+	//OutCtrl=ctrl;
 end
 
-//Sequential WRITE
+/*Sequential WRITE
 always@(posedge clk, negedge rst)
 begin
 	if(!rst)
@@ -40,5 +40,5 @@ begin
 		ctrl=InCtrl;
 	end
 	
-end
+end*/
 endmodule

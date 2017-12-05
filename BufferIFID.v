@@ -1,16 +1,19 @@
-module BufferIFID#(parameter S=15, N=1, C=1)
+module BufferIFID#(parameter S=15)
 (
 	output reg[S:0] OutInstr,
-	output reg[C:0] OutCtrl,
 	input [S:0] InInstr,
-	input InCtrl,
-	//flush
-	//hazard
+	//flush/hazard
 	input clk,
 	input rst
 );
+integer b;
 
-//Sequential WRITE
+always@(*)
+begin
+	OutInstr = InInstr;
+end
+
+/*Sequential WRITE
 always@(posedge clk, negedge rst)
 begin
 	if(!rst)
@@ -20,7 +23,8 @@ begin
 	//if(flush)
 	else
 	begin
-		OutInstr = InInstr;
+		b <= InInstr;
 	end
 end
+*/
 endmodule
