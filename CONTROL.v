@@ -8,7 +8,7 @@ module CONTROL(
 	output reg Mbyte,
 	output reg MV1src,
 	output reg Halt,
-//	output reg[1:0] Branch,
+	output reg[1:0] Bra,
 	output reg[1:0] Wdst,
 	output reg[1:0] MemW,
 	input [3:0] opcode,
@@ -28,6 +28,7 @@ begin
 	Halt = 1'b0;
 	Wdst = 2'b00;
 	MemW = 2'b00;	
+	Bra = 2'b11;
 
 	case(opcode)
 		//TYPE A
@@ -82,6 +83,12 @@ begin
 			OFFset = 1'b1;
 			MemW = 2'b10; 
 		end
+		// BLT
+		4'b0101: Bra = 2'b01;
+		//BGT
+		4'b0100: Bra = 2'b10;
+		//BEQ
+		4'b0110: Bra = 2'b00;
 	endcase
 
 

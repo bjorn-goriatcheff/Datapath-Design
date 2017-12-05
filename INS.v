@@ -1,4 +1,4 @@
-module INS#(parameter SIZE=64, NS=7)
+module INS#(parameter SIZE=64, NS=15)
 	(output reg[15:0] out,
 	input [NS:0] in,
 	input clk, 
@@ -37,16 +37,16 @@ begin
 		data[11]=16'hB696;
 		//LW R6 6(R9)
 		data[12]=16'hC696;
-		/////BEQ R7 4		//TODO
-		data[13]=16'hC696;
+		//BEQ R7 4	
+		data[13]=16'h6704;
 		//ADD R11 R1
 		data[14]=16'hFB10;
-		//////BLT R7 5		//TODO
-		data[15]=16'hFB10;
+		//BLT R7 5		
+		data[15]=16'h5705;
 		//ADD R11 R2
 		data[16]=16'hFB20;
 		//BGT R7 2
-		data[17]=16'hFB20;
+		data[17]=16'h4702;
 		//ADD R1 R1
 		data[18]=16'hF110;
 		//ADD R1 R1
