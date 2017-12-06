@@ -1,0 +1,475 @@
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3_Full64; Runtime version J-2014.12-SP3_Full64;  Dec  5 21:25 2017
+VCD+ Writer J-2014.12-SP3_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+                   0  PROGRAM COUNTER:  PC = 0000, New_PC = 0000 Branch = xxxx
+		 INSTRUCTION: xxxx, Read.op1 = x, Read.op2 = x
+		 ALU: Lower = xxxx, op1 = xxxx, op2 = xxxx, opcode = xxxx, func = zzzz,
+		 REGISTERS: WriteReg1 = xxxx, WriteReg2 = xxxx, WriteReg15 = xxxx, Wdst = xx 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = xxxx, IFFLUSH = x OUTPUT INST = xxxx 
+		INPUT ID/EX_BUFFER : data1 = xxxx, data2 = xxxx, data15 = 0000 
+		 OUTPUT ID/EX : data1 = xxxx, data2 =xxxx, data15 = xxxx, func = xxxx
+		 INPUT EXMEM : Lower = xxxx, Upper = xxxx, Word xxxx, Byte = xx 
+		 OUTPUT EXMEM: Lower = xxxx, Upper = xxxx, Word = xxxx, Byte = xx
+		 INPUT MEMWB: Word = xxxx, Byte = xx, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = x, EX/MEM.FOR = x, MEM/WB.FOR = x
+		 HMUX = x, LMUX = x
+
+                   5  PROGRAM COUNTER:  PC = 0000, New_PC = 0002 Branch = xxxx
+		 INSTRUCTION: f120, Read.op1 = x, Read.op2 = x
+		 ALU: Lower = xxxx, op1 = xxxx, op2 = xxxx, opcode = xxxx, func = zzzz,
+		 REGISTERS: WriteReg1 = xxxx, WriteReg2 = xxxx, WriteReg15 = xxxx, Wdst = xx 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = f120, IFFLUSH = x OUTPUT INST = xxxx 
+		INPUT ID/EX_BUFFER : data1 = xxxx, data2 = xxxx, data15 = 0000 
+		 OUTPUT ID/EX : data1 = xxxx, data2 =xxxx, data15 = 0000, func = xxxx
+		 INPUT EXMEM : Lower = xxxx, Upper = xxxx, Word xxxx, Byte = xx 
+		 OUTPUT EXMEM: Lower = xxxx, Upper = xxxx, Word = xxxx, Byte = xx
+		 INPUT MEMWB: Word = xxxx, Byte = xx, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = x, EX/MEM.FOR = x, MEM/WB.FOR = x
+		 HMUX = x, LMUX = x
+
+                  15  PROGRAM COUNTER:  PC = 0002, New_PC = 0004 Branch = 0082
+		 INSTRUCTION: f121, Read.op1 = 1, Read.op2 = 2
+		 ALU: Lower = xxxx, op1 = xxxx, op2 = xxxx, opcode = xxxx, func = zzzz,
+		 REGISTERS: WriteReg1 = xxxx, WriteReg2 = xxxx, WriteReg15 = xxxx, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = f121, IFFLUSH = 1 OUTPUT INST = f120 
+		INPUT ID/EX_BUFFER : data1 = 0f00, data2 = 0050, data15 = 0000 
+		 OUTPUT ID/EX : data1 = xxxx, data2 =xxxx, data15 = 0000, func = xxxx
+		 INPUT EXMEM : Lower = xxxx, Upper = xxxx, Word xxxx, Byte = xx 
+		 OUTPUT EXMEM: Lower = xxxx, Upper = xxxx, Word = xxxx, Byte = xx
+		 INPUT MEMWB: Word = xxxx, Byte = xx, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = x, EX/MEM.FOR = x, MEM/WB.FOR = x
+		 HMUX = x, LMUX = x
+
+                  25  PROGRAM COUNTER:  PC = 0004, New_PC = 0006 Branch = 0088
+		 INSTRUCTION: 93ff, Read.op1 = 1, Read.op2 = 2
+		 ALU: Lower = xxxx, op1 = 0f00, op2 = 0050, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = xxxx, WriteReg2 = 0f00, WriteReg15 = xxxx, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = 93ff, IFFLUSH = 1 OUTPUT INST = f121 
+		INPUT ID/EX_BUFFER : data1 = 0f00, data2 = 0050, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0f00, data2 =0050, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0f50, Upper = xxxx, Word 0f00, Byte = 00 
+		 OUTPUT EXMEM: Lower = xxxx, Upper = xxxx, Word = xxxx, Byte = xx
+		 INPUT MEMWB: Word = xxxx, Byte = xx, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 2, EX/MEM.FOR = x, MEM/WB.FOR = x
+		 HMUX = 0, LMUX = 0
+
+                  35  PROGRAM COUNTER:  PC = 0006, New_PC = 0008 Branch = 0002
+		 INSTRUCTION: 834c, Read.op1 = 3, Read.op2 = f
+		 ALU: Lower = 0f50, op1 = 0f00, op2 = 0050, opcode = 0001, func = zzzz,
+		 REGISTERS: WriteReg1 = 0f50, WriteReg2 = 0f00, WriteReg15 = xxxx, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = 834c, IFFLUSH = 1 OUTPUT INST = 93ff 
+		INPUT ID/EX_BUFFER : data1 = ff0f, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0f00, data2 =0050, data15 = 0000, func = 0001
+		 INPUT EXMEM : Lower = 0eb0, Upper = xxxx, Word 0f00, Byte = 00 
+		 OUTPUT EXMEM: Lower = 0f50, Upper = xxxx, Word = 0f00, Byte = 00
+		 INPUT MEMWB: Word = 0f00, Byte = 00, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 2, EX/MEM.FOR = 2, MEM/WB.FOR = 2
+		 HMUX = 0, LMUX = 0
+
+                  45  PROGRAM COUNTER:  PC = 0008, New_PC = 000a Branch = 0138
+		 INSTRUCTION: f564, Read.op1 = 3, Read.op2 = 4
+		 ALU: Lower = 0eb0, op1 = ff0f, op2 = 004c, opcode = 1011, func = zzzz,
+		 REGISTERS: WriteReg1 = 0eb0, WriteReg2 = ff0f, WriteReg15 = xxxx, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = f564, IFFLUSH = 1 OUTPUT INST = 834c 
+		INPUT ID/EX_BUFFER : data1 = ff0f, data2 = f0ff, data15 = 0000 
+		 OUTPUT ID/EX : data1 = ff0f, data2 =0000, data15 = 0000, func = 1011
+		 INPUT EXMEM : Lower = ff4f, Upper = xxxx, Word ff0f, Byte = 0f 
+		 OUTPUT EXMEM: Lower = 0eb0, Upper = xxxx, Word = 0f00, Byte = 00
+		 INPUT MEMWB: Word = 0f00, Byte = 00, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = f, EX/MEM.FOR = 2, MEM/WB.FOR = 2
+		 HMUX = 0, LMUX = 0
+
+                  55  PROGRAM COUNTER:  PC = 000a, New_PC = 000c Branch = 019a
+		 INSTRUCTION: f155, Read.op1 = 5, Read.op2 = 6
+		 ALU: Lower = ff4f, op1 = ff0f, op2 = 0064, opcode = 1001, func = zzzz,
+		 REGISTERS: WriteReg1 = ff4f, WriteReg2 = ff0f, WriteReg15 = xxxx, Wdst = 10 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = f155, IFFLUSH = 1 OUTPUT INST = f564 
+		INPUT ID/EX_BUFFER : data1 = 0040, data2 = 6666, data15 = 0000 
+		 OUTPUT ID/EX : data1 = ff0f, data2 =f0ff, data15 = 0000, func = 1001
+		 INPUT EXMEM : Lower = 0004, Upper = xxxx, Word ff0f, Byte = 0f 
+		 OUTPUT EXMEM: Lower = ff4f, Upper = xxxx, Word = ff0f, Byte = 0f
+		 INPUT MEMWB: Word = ff0f, Byte = 0f, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 4, EX/MEM.FOR = f, MEM/WB.FOR = f
+		 HMUX = 0, LMUX = 0
+
+                  65  PROGRAM COUNTER:  PC = 000c, New_PC = 000e Branch = 0160
+		 INSTRUCTION: fff1, Read.op1 = 1, Read.op2 = 5
+		 ALU: Lower = 0004, op1 = 0040, op2 = 6666, opcode = 0100, func = zzzz,
+		 REGISTERS: WriteReg1 = 0004, WriteReg2 = 0040, WriteReg15 = xxxx, Wdst = 10 
+		 MEMORY: Byte = 34, Word = 1234
+
+		 INPUT IF/ID : INST = fff1, IFFLUSH = 1 OUTPUT INST = f155 
+		INPUT ID/EX_BUFFER : data1 = 0f00, data2 = 0040, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0040, data2 =6666, data15 = 0000, func = 0100
+		 INPUT EXMEM : Lower = 9980, Upper = xxxx, Word 0040, Byte = 40 
+		 OUTPUT EXMEM: Lower = 0004, Upper = xxxx, Word = ff0f, Byte = 0f
+		 INPUT MEMWB: Word = ff0f, Byte = 0f, OUTPUT: Word = 1234, Byte = 34
+		 ID/EX.FOR = 6, EX/MEM.FOR = 4, MEM/WB.FOR = 4
+		 HMUX = 0, LMUX = 0
+
+                  75  PROGRAM COUNTER:  PC = 000e, New_PC = 0010 Branch = ffd2
+		 INSTRUCTION: f487, Read.op1 = f, Read.op2 = f
+		 ALU: Lower = 9980, op1 = 0f00, op2 = 0040, opcode = 0101, func = zzzz,
+		 REGISTERS: WriteReg1 = 9980, WriteReg2 = 0f00, WriteReg15 = xxxx, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = f487, IFFLUSH = 1 OUTPUT INST = fff1 
+		INPUT ID/EX_BUFFER : data1 = 0000, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0f00, data2 =0040, data15 = 0000, func = 0101
+		 INPUT EXMEM : Lower = 003c, Upper = 0000, Word 0f00, Byte = 00 
+		 OUTPUT EXMEM: Lower = 9980, Upper = xxxx, Word = 0040, Byte = 40
+		 INPUT MEMWB: Word = 0040, Byte = 40, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 5, EX/MEM.FOR = 6, MEM/WB.FOR = 6
+		 HMUX = 0, LMUX = 0
+
+                  85  PROGRAM COUNTER:  PC = 0010, New_PC = 0012 Branch = fe2c
+		 INSTRUCTION: f468, Read.op1 = 4, Read.op2 = 8
+		 ALU: Lower = 003c, op1 = 0000, op2 = 0000, opcode = 0001, func = zzzz,
+		 REGISTERS: WriteReg1 = 003c, WriteReg2 = 0000, WriteReg15 = 0000, Wdst = 00 
+		 MEMORY: Byte = 00, Word = 0000
+
+		 INPUT IF/ID : INST = f468, IFFLUSH = 1 OUTPUT INST = f487 
+		INPUT ID/EX_BUFFER : data1 = f0ff, data2 = ff88, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0000, data2 =0000, data15 = 0000, func = 0001
+		 INPUT EXMEM : Lower = 0000, Upper = 0000, Word 0000, Byte = 00 
+		 OUTPUT EXMEM: Lower = 003c, Upper = 0000, Word = 0f00, Byte = 00
+		 INPUT MEMWB: Word = 0f00, Byte = 00, OUTPUT: Word = 0000, Byte = 00
+		 ID/EX.FOR = f, EX/MEM.FOR = 5, MEM/WB.FOR = 5
+		 HMUX = 0, LMUX = 0
+
+                  95  PROGRAM COUNTER:  PC = 0012, New_PC = 0014 Branch = 01b2
+		 INSTRUCTION: 9402, Read.op1 = 4, Read.op2 = 6
+		 ALU: Lower = 0000, op1 = f0ff, op2 = ff88, opcode = 0111, func = zzzz,
+		 REGISTERS: WriteReg1 = ff88, WriteReg2 = f0ff, WriteReg15 = 0000, Wdst = 01 
+		 MEMORY: Byte = cd, Word = 2bcd
+
+		 INPUT IF/ID : INST = 9402, IFFLUSH = 1 OUTPUT INST = f468 
+		INPUT ID/EX_BUFFER : data1 = f0ff, data2 = 6666, data15 = 0000 
+		 OUTPUT ID/EX : data1 = f0ff, data2 =ff88, data15 = 0000, func = 0111
+		 INPUT EXMEM : Lower = ff88, Upper = 0000, Word f0ff, Byte = ff 
+		 OUTPUT EXMEM: Lower = 0000, Upper = 0000, Word = 0000, Byte = 00
+		 INPUT MEMWB: Word = 0000, Byte = 00, OUTPUT: Word = 2bcd, Byte = cd
+		 ID/EX.FOR = 8, EX/MEM.FOR = f, MEM/WB.FOR = f
+		 HMUX = 0, LMUX = 0
+
+                 105  PROGRAM COUNTER:  PC = 0014, New_PC = 0016 Branch = 001c
+		 INSTRUCTION: a694, Read.op1 = 4, Read.op2 = 0
+		 ALU: Lower = ff88, op1 = f0ff, op2 = 6666, opcode = 1000, func = zzzz,
+		 REGISTERS: WriteReg1 = 6666, WriteReg2 = f0ff, WriteReg15 = 0000, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = a694, IFFLUSH = 1 OUTPUT INST = 9402 
+		INPUT ID/EX_BUFFER : data1 = f0ff, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = f0ff, data2 =6666, data15 = 0000, func = 1000
+		 INPUT EXMEM : Lower = 6666, Upper = f0ff, Word f0ff, Byte = ff 
+		 OUTPUT EXMEM: Lower = ff88, Upper = 0000, Word = f0ff, Byte = ff
+		 INPUT MEMWB: Word = f0ff, Byte = ff, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 6, EX/MEM.FOR = 8, MEM/WB.FOR = 8
+		 HMUX = 0, LMUX = 0
+
+                 115  PROGRAM COUNTER:  PC = 0016, New_PC = 0018 Branch = fe66
+		 INSTRUCTION: b696, Read.op1 = 6, Read.op2 = 9
+		 ALU: Lower = 6666, op1 = f0ff, op2 = 0094, opcode = 1011, func = zzzz,
+		 REGISTERS: WriteReg1 = 6666, WriteReg2 = f0ff, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = b696, IFFLUSH = 1 OUTPUT INST = a694 
+		INPUT ID/EX_BUFFER : data1 = 6666, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = f0ff, data2 =0000, data15 = 0000, func = 1011
+		 INPUT EXMEM : Lower = f0ff, Upper = f0ff, Word f0ff, Byte = ff 
+		 OUTPUT EXMEM: Lower = 6666, Upper = f0ff, Word = f0ff, Byte = ff
+		 INPUT MEMWB: Word = f0ff, Byte = ff, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 0, EX/MEM.FOR = 6, MEM/WB.FOR = 6
+		 HMUX = 0, LMUX = 0
+
+                 125  PROGRAM COUNTER:  PC = 0018, New_PC = 001a Branch = fe70
+		 INSTRUCTION: c696, Read.op1 = 6, Read.op2 = 9
+		 ALU: Lower = f0ff, op1 = 0006, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = f0ff, WriteReg2 = 6666, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = c696, IFFLUSH = 1 OUTPUT INST = b696 
+		INPUT ID/EX_BUFFER : data1 = 6666, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 6666, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0006, Upper = f0ff, Word 6666, Byte = 66 
+		 OUTPUT EXMEM: Lower = f0ff, Upper = f0ff, Word = f0ff, Byte = ff
+		 INPUT MEMWB: Word = f0ff, Byte = ff, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 9, EX/MEM.FOR = 0, MEM/WB.FOR = 0
+		 HMUX = 0, LMUX = 0
+
+                 135  PROGRAM COUNTER:  PC = 001a, New_PC = 001c Branch = fe72
+		 INSTRUCTION: 6704, Read.op1 = 6, Read.op2 = 9
+		 ALU: Lower = 0006, op1 = 0006, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 00ad, WriteReg2 = 6666, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = ad, Word = dead
+
+		 INPUT IF/ID : INST = 6704, IFFLUSH = 1 OUTPUT INST = c696 
+		INPUT ID/EX_BUFFER : data1 = 6666, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 6666, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0006, Upper = f0ff, Word 6666, Byte = 66 
+		 OUTPUT EXMEM: Lower = 0006, Upper = f0ff, Word = 6666, Byte = 66
+		 INPUT MEMWB: Word = 6666, Byte = 66, OUTPUT: Word = dead, Byte = ad
+		 ID/EX.FOR = 9, EX/MEM.FOR = 9, MEM/WB.FOR = 9
+		 HMUX = 0, LMUX = 0
+
+                 145  PROGRAM COUNTER:  PC = 001c, New_PC = 001e Branch = 002c
+		 INSTRUCTION: fb10, Read.op1 = 7, Read.op2 = 0
+		 ALU: Lower = 0006, op1 = 0004, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 0006, WriteReg2 = 6666, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = ad, Word = dead
+
+		 INPUT IF/ID : INST = fb10, IFFLUSH = 1 OUTPUT INST = 6704 
+		INPUT ID/EX_BUFFER : data1 = 00ff, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 6666, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0004, Upper = f0ff, Word 6666, Byte = 66 
+		 OUTPUT EXMEM: Lower = 0006, Upper = f0ff, Word = 6666, Byte = 66
+		 INPUT MEMWB: Word = 6666, Byte = 66, OUTPUT: Word = dead, Byte = ad
+		 ID/EX.FOR = 9, EX/MEM.FOR = 9, MEM/WB.FOR = 9
+		 HMUX = 0, LMUX = 0
+
+                 155  PROGRAM COUNTER:  PC = 001e, New_PC = 0020 Branch = 005e
+		 INSTRUCTION: 5705, Read.op1 = b, Read.op2 = 1
+		 ALU: Lower = 0004, op1 = 00ff, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 1234, WriteReg2 = 00ff, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = 34, Word = 1234
+
+		 INPUT IF/ID : INST = 5705, IFFLUSH = 1 OUTPUT INST = fb10 
+		INPUT ID/EX_BUFFER : data1 = 0000, data2 = 0f00, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 00ff, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 00ff, Upper = f0ff, Word 00ff, Byte = ff 
+		 OUTPUT EXMEM: Lower = 0004, Upper = f0ff, Word = 6666, Byte = 66
+		 INPUT MEMWB: Word = 6666, Byte = 66, OUTPUT: Word = 1234, Byte = 34
+		 ID/EX.FOR = 0, EX/MEM.FOR = 9, MEM/WB.FOR = 9
+		 HMUX = 0, LMUX = 0
+
+                 165  PROGRAM COUNTER:  PC = 0020, New_PC = 0022 Branch = 0034
+		 INSTRUCTION: fb20, Read.op1 = 7, Read.op2 = 0
+		 ALU: Lower = 00ff, op1 = 0000, op2 = 0f00, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 00ff, WriteReg2 = 0000, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = fb20, IFFLUSH = 1 OUTPUT INST = 5705 
+		INPUT ID/EX_BUFFER : data1 = 00ff, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0000, data2 =0f00, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0f00, Upper = f0ff, Word 0000, Byte = 00 
+		 OUTPUT EXMEM: Lower = 00ff, Upper = f0ff, Word = 00ff, Byte = ff
+		 INPUT MEMWB: Word = 00ff, Byte = ff, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 1, EX/MEM.FOR = 0, MEM/WB.FOR = 0
+		 HMUX = 0, LMUX = 0
+
+                 175  PROGRAM COUNTER:  PC = 0022, New_PC = 0024 Branch = 00a2
+		 INSTRUCTION: 4702, Read.op1 = b, Read.op2 = 2
+		 ALU: Lower = 0f00, op1 = 00ff, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 0f00, WriteReg2 = 00ff, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = 4702, IFFLUSH = 1 OUTPUT INST = fb20 
+		INPUT ID/EX_BUFFER : data1 = 0000, data2 = 0050, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 00ff, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 00ff, Upper = f0ff, Word 00ff, Byte = ff 
+		 OUTPUT EXMEM: Lower = 0f00, Upper = f0ff, Word = 0000, Byte = 00
+		 INPUT MEMWB: Word = 0000, Byte = 00, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 0, EX/MEM.FOR = 1, MEM/WB.FOR = 1
+		 HMUX = 0, LMUX = 0
+
+                 185  PROGRAM COUNTER:  PC = 0024, New_PC = 0026 Branch = 002c
+		 INSTRUCTION: f110, Read.op1 = 7, Read.op2 = 0
+		 ALU: Lower = 00ff, op1 = 0000, op2 = 0050, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 00ff, WriteReg2 = 0000, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = f110, IFFLUSH = 1 OUTPUT INST = 4702 
+		INPUT ID/EX_BUFFER : data1 = 00ff, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0000, data2 =0050, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0050, Upper = f0ff, Word 0000, Byte = 00 
+		 OUTPUT EXMEM: Lower = 00ff, Upper = f0ff, Word = 00ff, Byte = ff
+		 INPUT MEMWB: Word = 00ff, Byte = ff, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 2, EX/MEM.FOR = 0, MEM/WB.FOR = 0
+		 HMUX = 0, LMUX = 0
+
+                 195  PROGRAM COUNTER:  PC = 0026, New_PC = 0028 Branch = 0066
+		 INSTRUCTION: f110, Read.op1 = 1, Read.op2 = 1
+		 ALU: Lower = 0050, op1 = 00ff, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 0050, WriteReg2 = 00ff, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = 00, Word = 0000
+
+		 INPUT IF/ID : INST = f110, IFFLUSH = 1 OUTPUT INST = f110 
+		INPUT ID/EX_BUFFER : data1 = 0f00, data2 = 0f00, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 00ff, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 00ff, Upper = f0ff, Word 00ff, Byte = ff 
+		 OUTPUT EXMEM: Lower = 0050, Upper = f0ff, Word = 0000, Byte = 00
+		 INPUT MEMWB: Word = 0000, Byte = 00, OUTPUT: Word = 0000, Byte = 00
+		 ID/EX.FOR = 0, EX/MEM.FOR = 2, MEM/WB.FOR = 2
+		 HMUX = 0, LMUX = 0
+
+                 205  PROGRAM COUNTER:  PC = 0028, New_PC = 002a Branch = 0068
+		 INSTRUCTION: c890, Read.op1 = 1, Read.op2 = 1
+		 ALU: Lower = 00ff, op1 = 0f00, op2 = 0f00, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 00ff, WriteReg2 = 0f00, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = c890, IFFLUSH = 1 OUTPUT INST = f110 
+		INPUT ID/EX_BUFFER : data1 = 0f00, data2 = 0f00, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0f00, data2 =0f00, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 1e00, Upper = f0ff, Word 0f00, Byte = 00 
+		 OUTPUT EXMEM: Lower = 00ff, Upper = f0ff, Word = 00ff, Byte = ff
+		 INPUT MEMWB: Word = 00ff, Byte = ff, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 1, EX/MEM.FOR = 0, MEM/WB.FOR = 0
+		 HMUX = 0, LMUX = 0
+
+                 215  PROGRAM COUNTER:  PC = 002a, New_PC = 002c Branch = fe6a
+		 INSTRUCTION: f880, Read.op1 = 8, Read.op2 = 9
+		 ALU: Lower = 1e00, op1 = 0f00, op2 = 0f00, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 1e00, WriteReg2 = 0f00, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = f880, IFFLUSH = 1 OUTPUT INST = c890 
+		INPUT ID/EX_BUFFER : data1 = ff88, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0f00, data2 =0f00, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 1e00, Upper = f0ff, Word 0f00, Byte = 00 
+		 OUTPUT EXMEM: Lower = 1e00, Upper = f0ff, Word = 0f00, Byte = 00
+		 INPUT MEMWB: Word = 0f00, Byte = 00, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 1, EX/MEM.FOR = 1, MEM/WB.FOR = 1
+		 HMUX = 0, LMUX = 0
+
+                 225  PROGRAM COUNTER:  PC = 002c, New_PC = 002e Branch = fe2c
+		 INSTRUCTION: d892, Read.op1 = 8, Read.op2 = 8
+		 ALU: Lower = 1e00, op1 = 0000, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 1e00, WriteReg2 = ff88, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = d892, IFFLUSH = 1 OUTPUT INST = f880 
+		INPUT ID/EX_BUFFER : data1 = ff88, data2 = ff88, data15 = 0000 
+		 OUTPUT ID/EX : data1 = ff88, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0000, Upper = f0ff, Word ff88, Byte = 88 
+		 OUTPUT EXMEM: Lower = 1e00, Upper = f0ff, Word = 0f00, Byte = 00
+		 INPUT MEMWB: Word = 0f00, Byte = 00, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 9, EX/MEM.FOR = 1, MEM/WB.FOR = 1
+		 HMUX = 0, LMUX = 0
+
+                 235  PROGRAM COUNTER:  PC = 002e, New_PC = 0030 Branch = fe76
+		 INSTRUCTION: ca92, Read.op1 = 8, Read.op2 = 9
+		 ALU: Lower = 0000, op1 = ff88, op2 = ff88, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 2bcd, WriteReg2 = ff88, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = cd, Word = 2bcd
+
+		 INPUT IF/ID : INST = ca92, IFFLUSH = 1 OUTPUT INST = d892 
+		INPUT ID/EX_BUFFER : data1 = ff88, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = ff88, data2 =ff88, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = ff10, Upper = f0ff, Word ff88, Byte = 88 
+		 OUTPUT EXMEM: Lower = 0000, Upper = f0ff, Word = ff88, Byte = 88
+		 INPUT MEMWB: Word = ff88, Byte = 88, OUTPUT: Word = 2bcd, Byte = cd
+		 ID/EX.FOR = 8, EX/MEM.FOR = 9, MEM/WB.FOR = 9
+		 HMUX = 0, LMUX = 0
+
+                 245  PROGRAM COUNTER:  PC = 0030, New_PC = 0032 Branch = fe78
+		 INSTRUCTION: fcc0, Read.op1 = a, Read.op2 = 9
+		 ALU: Lower = ff10, op1 = 0002, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = ff10, WriteReg2 = ff88, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = fcc0, IFFLUSH = 1 OUTPUT INST = ca92 
+		INPUT ID/EX_BUFFER : data1 = 0000, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = ff88, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0002, Upper = f0ff, Word ff88, Byte = 88 
+		 OUTPUT EXMEM: Lower = ff10, Upper = f0ff, Word = ff88, Byte = 88
+		 INPUT MEMWB: Word = ff88, Byte = 88, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = 9, EX/MEM.FOR = 8, MEM/WB.FOR = 8
+		 HMUX = 0, LMUX = 0
+
+                 255  PROGRAM COUNTER:  PC = 0032, New_PC = 0034 Branch = ff32
+		 INSTRUCTION: fdd1, Read.op1 = c, Read.op2 = c
+		 ALU: Lower = 0002, op1 = 0000, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 0002, WriteReg2 = 0000, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = 00, Word = 0000
+
+		 INPUT IF/ID : INST = fdd1, IFFLUSH = 1 OUTPUT INST = fcc0 
+		INPUT ID/EX_BUFFER : data1 = cccc, data2 = cccc, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0000, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0000, Upper = f0ff, Word 0000, Byte = 00 
+		 OUTPUT EXMEM: Lower = 0002, Upper = f0ff, Word = ff88, Byte = 88
+		 INPUT MEMWB: Word = ff88, Byte = 88, OUTPUT: Word = 0000, Byte = 00
+		 ID/EX.FOR = 9, EX/MEM.FOR = 9, MEM/WB.FOR = 9
+		 HMUX = 0, LMUX = 0
+
+                 265  PROGRAM COUNTER:  PC = 0034, New_PC = 0036 Branch = ff78
+		 INSTRUCTION: fcd0, Read.op1 = d, Read.op2 = d
+		 ALU: Lower = 0000, op1 = cccc, op2 = cccc, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 2bcd, WriteReg2 = cccc, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = cd, Word = 2bcd
+
+		 INPUT IF/ID : INST = fcd0, IFFLUSH = 1 OUTPUT INST = fdd1 
+		INPUT ID/EX_BUFFER : data1 = 0002, data2 = 0002, data15 = 0000 
+		 OUTPUT ID/EX : data1 = cccc, data2 =cccc, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 9998, Upper = f0ff, Word cccc, Byte = cc 
+		 OUTPUT EXMEM: Lower = 0000, Upper = f0ff, Word = 0000, Byte = 00
+		 INPUT MEMWB: Word = 0000, Byte = 00, OUTPUT: Word = 2bcd, Byte = cd
+		 ID/EX.FOR = c, EX/MEM.FOR = 9, MEM/WB.FOR = 9
+		 HMUX = 0, LMUX = 0
+
+                 275  PROGRAM COUNTER:  PC = 0036, New_PC = 0038 Branch = ff76
+		 INSTRUCTION: efff, Read.op1 = c, Read.op2 = d
+		 ALU: Lower = 9998, op1 = 0002, op2 = 0002, opcode = 0001, func = zzzz,
+		 REGISTERS: WriteReg1 = 9998, WriteReg2 = 0002, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = efff, IFFLUSH = 1 OUTPUT INST = fcd0 
+		INPUT ID/EX_BUFFER : data1 = cccc, data2 = 0002, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0002, data2 =0002, data15 = 0000, func = 0001
+		 INPUT EXMEM : Lower = 0000, Upper = f0ff, Word 0002, Byte = 02 
+		 OUTPUT EXMEM: Lower = 9998, Upper = f0ff, Word = cccc, Byte = cc
+		 INPUT MEMWB: Word = cccc, Byte = cc, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = d, EX/MEM.FOR = c, MEM/WB.FOR = c
+		 HMUX = 0, LMUX = 0
+
+                 285  PROGRAM COUNTER:  PC = 0038, New_PC = 003a Branch = 0034
+		 INSTRUCTION: xxxx, Read.op1 = f, Read.op2 = f
+		 ALU: Lower = 0000, op1 = cccc, op2 = 0002, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = 0000, WriteReg2 = cccc, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = cd, Word = 2bcd
+
+		 INPUT IF/ID : INST = xxxx, IFFLUSH = 1 OUTPUT INST = efff 
+		INPUT ID/EX_BUFFER : data1 = 0000, data2 = 0000, data15 = 0000 
+		 OUTPUT ID/EX : data1 = cccc, data2 =0002, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = ccce, Upper = f0ff, Word cccc, Byte = cc 
+		 OUTPUT EXMEM: Lower = 0000, Upper = f0ff, Word = 0002, Byte = 02
+		 INPUT MEMWB: Word = 0002, Byte = 02, OUTPUT: Word = 2bcd, Byte = cd
+		 ID/EX.FOR = d, EX/MEM.FOR = d, MEM/WB.FOR = d
+		 HMUX = 0, LMUX = 0
+
+                 295  PROGRAM COUNTER:  PC = 003a, New_PC = 003c Branch = xxxx
+		 INSTRUCTION: xxxx, Read.op1 = x, Read.op2 = x
+		 ALU: Lower = ccce, op1 = 0000, op2 = 0000, opcode = 0000, func = zzzz,
+		 REGISTERS: WriteReg1 = ccce, WriteReg2 = 0000, WriteReg15 = f0ff, Wdst = 00 
+		 MEMORY: Byte = xx, Word = xxxx
+
+		 INPUT IF/ID : INST = xxxx, IFFLUSH = 1 OUTPUT INST = xxxx 
+		INPUT ID/EX_BUFFER : data1 = xxxx, data2 = xxxx, data15 = 0000 
+		 OUTPUT ID/EX : data1 = 0000, data2 =0000, data15 = 0000, func = 0000
+		 INPUT EXMEM : Lower = 0000, Upper = f0ff, Word 0000, Byte = 00 
+		 OUTPUT EXMEM: Lower = ccce, Upper = f0ff, Word = cccc, Byte = cc
+		 INPUT MEMWB: Word = cccc, Byte = cc, OUTPUT: Word = xxxx, Byte = xx
+		 ID/EX.FOR = f, EX/MEM.FOR = d, MEM/WB.FOR = d
+		 HMUX = 0, LMUX = 0
+
+$finish called from file "cpu_fixture.v", line 81.
+$finish at simulation time                  300
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 300
+CPU Time:      0.350 seconds;       Data structure size:   0.0Mb
+Tue Dec  5 21:25:19 2017
