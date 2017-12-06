@@ -6,14 +6,14 @@
 module Count_fixture;
 
 wire[15:0] inst;
-wire[7:0] count, addr, n_add;
+wire[15:0] count, addr, n_add;
 reg CLOCK, CLEAR, CTRL;
 
 initial
         $vcdpluson;
 initial
         $monitor($time, "PC = %b    add = %b   ctrl=%b     inst=%h", count, addr, CTRL, inst);
-MU3x1 #(7)mux(n_add, count, addr, CTRL);
+MU3x1 #(15)mux(n_add, count, addr, CTRL);
 Adder2 up(addr, count);
 PC pc(count, n_add, CLOCK, CLEAR);
 INS ins(inst, count, CLOCK, CLEAR);

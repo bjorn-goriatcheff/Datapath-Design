@@ -5,7 +5,7 @@ module ALU_fixture;
 reg [15:0] dat1,dat2;
 reg [3:0] op;
 wire [15:0] up, low;
-wire ze;
+wire [1:0]ze;
 
 initial
         $vcdpluson;
